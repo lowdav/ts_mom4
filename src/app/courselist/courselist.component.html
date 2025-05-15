@@ -1,0 +1,16 @@
+
+   <H1>Kurslista</H1>
+    <div class="headline">
+        <p class="header">Kurskod</p>
+        <p class="header">Kursnamn</p>
+        <p class="header">Progression</p>
+        <p class="header">Kursplan</p>
+    </div>
+    <div id="courselist">
+    </div>
+
+    <ul>
+    <li *ngFor="let course of courselist">
+        {{ course.code }}
+    </li>
+</ul>

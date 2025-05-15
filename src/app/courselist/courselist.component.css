@@ -1,0 +1,39 @@
+
+.header,
+.courserow,
+.inputcontainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+}
+
+.courserow:first-of-type {
+    margin-top: 15px;
+}
+
+.courserow {
+    margin-bottom: 10px;
+    border: 1px dotted;
+    padding: 10px;
+}
+.courserow:nth-child(odd){
+    background-color: #e6f4ea;
+}
+
+.courserow:nth-child(even){
+    background-color: #f3f9f5;
+}
+
+
+
+@media (max-width: 900px ) {
+    .header,
+    .courserow,
+    .inputcontainer{
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .header {
+        display: none;
+    }
+}
