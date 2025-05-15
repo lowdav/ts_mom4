@@ -1,26 +1,25 @@
 .container {
-    width: 90%;
     max-width: 960px;
     margin: 0 auto;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: 1.2rem;
 }
 
-
-.headline,
-.courselist{
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+table {
+    width: 100%;
 }
 
-.header,
-.courserow {
-    margin-bottom: 10px;
-    border: 1px dotted;
-    padding: 10px;
-}
-
-.header{
+thead tr{
     background-color: rgb(208, 246, 233);
 }
-.courserow{
+
+tr {
     background-color: blanchedalmond;
+}
+th, td {
+    padding: 15px;
+}
+
+.center{
+    text-align: center;
 }

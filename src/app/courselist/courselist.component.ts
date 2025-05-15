@@ -14,6 +14,7 @@ export class CourselistComponent {
 
 constructor(private getcoursesservice: GetcoursesService) {}
  
+//Prenumeration på den observable som skapades i getcourses. services.ts
 ngOnInit() {
     this.getcoursesservice.getCourses().subscribe(data => {
       this.courselist = data;

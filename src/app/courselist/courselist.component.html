@@ -1,13 +1,19 @@
 <div class="container">
-   <H1>Kurslista</H1>
-    <div class="headline">
-        <p class="header">Kurskod</p>
-        <p class="header">Kursnamn</p>
-        <p class="header">Progression</p>
-    </div>
-    <div class="courselist" *ngFor="let course of courselist">
-        <div class="courserow">{{ course.code }}</div>
-        <div class="courserow">{{ course.coursename }}</div>
-        <div class="courserow">{{ course.progression }}</div>
-    </div>
+  <h1>Kurslista</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Kurskod</th>
+        <th>Kursnamn</th>
+        <th>Progression</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let course of courselist">
+        <td class="center">{{ course.code }}</td>
+        <td>{{ course.coursename }}</td>
+        <td class="center">{{ course.progression }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
