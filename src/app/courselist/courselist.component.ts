@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { Course } from '../model/course';
 import { GetcoursesService } from '../services/getcourses.service';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-courselist',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './courselist.component.html',
   styleUrl: './courselist.component.css'
 })
