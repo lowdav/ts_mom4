@@ -2,23 +2,24 @@
   <h1>Webbutveckling - Ramschema</h1>
   <div class="search">
     <label for="search">Sök:</label>
-    <input type="text" id="search" placeholder="Sök efter kurskod, kursnamn eller progression">
+    <input type="text" [(ngModel)]="searchTerm" id="search" placeholder="Sök efter kurskod, kursnamn eller progression">
   </div>
-
+  <p>Klicka på rubriken för att sortera</p>
   <table>
     <thead>
       <tr>
-        <th>Kurskod</th>
-        <th>Kursnamn</th>
-        <th>Progression</th>
+        <th (click)="sortCourses('code')">Kurskod</th>
+        <th (click)="sortCourses('coursename')">Kursnamn</th>
+        <th (click)="sortCourses('progression')">Progression</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let course of courselist">
+      <tr *ngFor="let course of filteredCourses()">
         <td class="center">{{ course.code }}</td>
         <td>{{ course.coursename }}</td>
         <td class="center">{{ course.progression }}</td>
       </tr>
     </tbody>
   </table>
+
 </div>
